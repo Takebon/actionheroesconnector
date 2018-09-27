@@ -53,7 +53,7 @@ module.exports = {
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
-    baseURL: 'http://127.0.0.1:3000'
+    baseURL: 'https://aqueous-cliffs-30247.herokuapp.com'
     
     
   },
