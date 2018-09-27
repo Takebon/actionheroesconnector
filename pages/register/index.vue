@@ -68,13 +68,19 @@ export default {
     },
     methods: {
         onSubmit() {
-            this.$store.dispatch('register', {
+            const user = {
                 name: this.name,
                 email: this.email,
                 password: this.password,
                 password2: this.password2,
                 avatarURL: this.avatarURL
-            })        
+            }
+
+            const fixUserData = (user) => {
+                Object.keys(user).forEach((key) => (user[key] == '') && delete user[key])
+                return user
+            }
+            this.$store.dispatch('register', fixUserData(user))        
         }
     },
    computed: {

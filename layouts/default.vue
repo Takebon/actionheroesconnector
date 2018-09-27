@@ -25,8 +25,8 @@
                       v-if="isLogin"><b-img 
                       class="rounded-circle" 
                       style="width: 25px;margin-right:5px" 
-                      :src="currentUser.user.avatarURL"
-                      alt="" :title="currentUser.user.name" />Logout</b-link>                   
+                      :src="currentUser.avatarURL"
+                      alt="" :title="currentUser.name" />Logout</b-link>                   
             </b-navbar-nav>            
           </b-navbar-nav>
         </b-collapse>
@@ -54,7 +54,7 @@
         return this.$store.getters.isLogin
       },
       currentUser() {
-        return this.$store.getters.currentUserProfile
+        return this.$store.state.currentUser
       }
     }
     

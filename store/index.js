@@ -128,13 +128,7 @@ const createStore = () => {
             },
             register(vuexContext, userData) {
                 vuexContext.commit('setMessage', '')
-                this.$axios.$post('/api/users/register', {
-                    name: userData.name,
-                    email: userData.email,
-                    password: userData.password,
-                    password2: userData.password2,
-                    avatarURL: userData.avatarURL
-                })
+                this.$axios.$post('/api/users/register', userData)
                 .then(response => {
                     vuexContext.commit('setMessage', response.message)
                     this.$router.push('/login')
