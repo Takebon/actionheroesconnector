@@ -1,59 +1,71 @@
 <template>
-  <section class="container">
-    <div>
-      <logo/>
-      <h1 class="title">
-        actionheroesconnector
-      </h1>
-      <h2 class="subtitle">
-        My ace Nuxt.js project
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
-        <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">GitHub</a>
+  <div class="landing">
+    <div class="dark-overlay landing-inner text-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h1 class="display-3 mb-4">Developer Connector
+            </h1>
+            <p class="lead"> Create a developer profile/portfolio, share posts and get help from other developers</p>
+            <hr />
+            <nuxt-link to="/register" class="btn btn-lg btn-info mr-2">Sign Up</nuxt-link>
+            <nuxt-link to="/login" class="btn btn-lg btn-light">Login</nuxt-link>            
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+
+  </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+
 
 export default {
   components: {
-    Logo
+    
   }
 }
 </script>
 
-<style>
-.container
-{
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+<style scoped>
+img {
+  width: 100%;
 }
-.title
-{
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+
+.landing {
+  position: relative;
+  background: url('~/assets/img/showcase.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin-top: -24px;
+  margin-bottom: -50px;
 }
-.subtitle
-{
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+
+.landing-inner {
+  padding-top: 80px;
 }
-.links
-{
-  padding-top: 15px;
+
+.dark-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card-form {
+  opacity: 0.9;
+}
+
+.latest-profiles-img {
+  width: 40px;
+  height: 40px;
+}
+
+.form-control::placeholder {
+  color: #bbb !important;
 }
 </style>

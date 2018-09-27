@@ -14,7 +14,9 @@ module.exports = {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: "https://fonts.googleapis.com/css?family=Kosugi+Maru" },
+      { rel: 'stylesheet', href: "https://use.fontawesome.com/releases/v5.3.1/css/all.css", integrity: "sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU", crossorigin: "anonymous"}
     ]
   },
 
@@ -33,6 +35,8 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/axios',
+    '~plugins/date-filter.js'
   ],
 
   /*
@@ -49,6 +53,9 @@ module.exports = {
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
+    baseURL: 'http://127.0.0.1:3000'
+    
+    
   },
 
   /*
@@ -61,5 +68,5 @@ module.exports = {
     extend(config, ctx) {
       
     }
-  }
+  } 
 }
