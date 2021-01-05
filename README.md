@@ -1,7 +1,7 @@
 # actionheroesconnector
 
-> Brad Traversy's excellent course(https://www.udemy.com/mern-stack-front-to-back/) rewrite with Nuxt.
-Live preview : https://aqueous-cliffs-30247.herokuapp.com/
+>https://www.udemy.com/mern-stack-front-to-back/ rewrite with Nuxt.
+
 
 ## Build Setup
 
